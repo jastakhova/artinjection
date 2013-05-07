@@ -9,18 +9,12 @@ object Crawler extends CrawlerStrategy with CrawledData with ThinQueryStrategy {
 }
 
 trait CrawledData extends IOUtils {
-  val destinationDir = "/tmp/crawled"
-  val prefix = "asked_for_%s.html"
+  val destinationDir = CommonProperties.crawledDataDirectory
+  val prefix = CommonProperties.crawledDataPrefix + "%s.html"
 
   def process(name: String, input: String) {
     new File(destinationDir).mkdir()
     toFile(input, new File(destinationDir + "/" + prefix format name))
-  }
-}
-
-trait ParsedCrawledData extends CrawledData {
-  override def process(name: String, input: String) {
-
   }
 }
 
