@@ -16,11 +16,11 @@ class HTML5Parser extends NoBindingFactoryAdapter {
     loadXML(source)
   }
 
-  def loadXML(source : String) = {
+  def loadXML(source : String): Node = {
     loadXML(new InputSource(new StringReader(source)))
   }
 
-  def loadXML(source : InputSource) = {
+  def loadXML(source : InputSource): Node = {
     import nu.validator.htmlparser.{sax,common}
     import sax.HtmlParser
     import common.XmlViolationPolicy
