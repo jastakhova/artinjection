@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="crawler"
+		module="crawler$sources_javadoc_2.9.1"
+		revision="1.0"
+		conf="runtime"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
+		date="20130506183332"/>
+	<dependencies>
+		<module organisation="org.scalaj" name="scalaj-http_2.9.1">
+			<revision name="0.3.2" status="release" pubdate="20120822133229" resolver="public" artresolver="public" homepage="http://github.com/scalaj/scalaj-http" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2873" time="0" location="/Users/grrrl/.ivy2/cache/org.scalaj/scalaj-http_2.9.1/ivy-0.3.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.9.1/0.3.2/scalaj-http_2.9.1-0.3.2.pom"/>
+				<caller organisation="crawler" name="crawler$sources_javadoc_2.9.1" conf="compile, runtime" rev="0.3.2" rev-constraint-default="0.3.2" rev-constraint-dynamic="0.3.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scalaj-http_2.9.1" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4834" time="0" location="/Users/grrrl/.ivy2/cache/org.scalaj/scalaj-http_2.9.1/srcs/scalaj-http_2.9.1-0.3.2-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.9.1/0.3.2/scalaj-http_2.9.1-0.3.2-sources.jar"/>
+					</artifact>
+					<artifact name="scalaj-http_2.9.1" type="jar" ext="jar" status="no" details="" size="68750" time="0" location="/Users/grrrl/.ivy2/cache/org.scalaj/scalaj-http_2.9.1/jars/scalaj-http_2.9.1-0.3.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.9.1/0.3.2/scalaj-http_2.9.1-0.3.2.jar"/>
+					</artifact>
+					<artifact name="scalaj-http_2.9.1" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="273489" time="0" location="/Users/grrrl/.ivy2/cache/org.scalaj/scalaj-http_2.9.1/docs/scalaj-http_2.9.1-0.3.2-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.9.1/0.3.2/scalaj-http_2.9.1-0.3.2-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.5" status="release" pubdate="20110324183406" resolver="public" artresolver="public" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+				<metadata-artifact status="no" details="" size="6299" time="0" location="/Users/grrrl/.ivy2/cache/commons-codec/commons-codec/ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5.pom"/>
+				<caller organisation="crawler" name="crawler$sources_javadoc_2.9.1" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="102254" time="0" location="/Users/grrrl/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.5-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5-sources.jar"/>
+					</artifact>
+					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="73098" time="0" location="/Users/grrrl/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
+					</artifact>
+					<artifact name="commons-codec" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="278245" time="0" location="/Users/grrrl/.ivy2/cache/commons-codec/commons-codec/docs/commons-codec-1.5-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.9.1" status="release" pubdate="20110831013953" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2322" time="0" location="/Users/grrrl/.ivy2/cache/org.scala-lang/scala-library/ivy-2.9.1.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/org/scala-lang/scala-library/2.9.1/scala-library-2.9.1.pom"/>
+				<caller organisation="crawler" name="crawler$sources_javadoc_2.9.1" conf="compile, runtime" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1131083" time="0" location="/Users/grrrl/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.9.1-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.1/scala-library-2.9.1-sources.jar"/>
+					</artifact>
+					<artifact name="scala-library" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="20381370" time="0" location="/Users/grrrl/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.9.1-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.1/scala-library-2.9.1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

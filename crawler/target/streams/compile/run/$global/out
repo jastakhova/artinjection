@@ -1,0 +1,18 @@
+[0m[[0minfo[0m] [0mRunning artinjetion.crawler.Crawler [0m
+[0m[[0mdebug[0m] [0mStarting sandboxed run...[0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0m  Classpath:[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/projects/artinjection/crawler/target/scala-2.9.1/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/projects/artinjection/core/target/scala-2.9.1/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.sbt/boot/scala-2.9.1/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/net.databinder.dispatch/dispatch-core_2.9.1/jars/dispatch-core_2.9.1-0.9.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.7.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/io.netty/netty/bundles/netty-3.4.4.Final.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.6.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/org.scalaj/scalaj-http_2.9.1/jars/scalaj-http_2.9.1-0.3.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/grrrl/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.5.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main to exit[0m
+[0m[[0mdebug[0m] [0m	Thread run-main exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m
