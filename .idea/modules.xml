@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/artinjection.iml" filepath="$PROJECT_DIR$/.idea_modules/artinjection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/artinjection-build.iml" filepath="$PROJECT_DIR$/.idea_modules/artinjection-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/crawler.iml" filepath="$PROJECT_DIR$/.idea_modules/crawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/crawler-build.iml" filepath="$PROJECT_DIR$/.idea_modules/crawler-build.iml" />
+    </modules>
+  </component>
+</project>
+
