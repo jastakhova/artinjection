@@ -16,7 +16,7 @@ class CrawledDataDumper(settings: DumpSettings) extends IOUtils {
 
   def dump(name: String, input: String) {
     new File(settings.directory).mkdirs()
-    toFile(input, new File(settings.directory + "/" + prefix format name))
+    toFile(input.replaceAll("\n", ""), new File(settings.directory + "/" + prefix format name))
   }
 }
 

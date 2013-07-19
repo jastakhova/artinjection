@@ -1,0 +1,13 @@
++ dumping found painting records to a file; output should contain only statistics
+
+- statistics 1) resources with found painting records
+2) resources with no painting record
+3) per resource: elements with painting, painting count if painting records were found
+
+- serializing statistics
+
+- querying statistics per resource
+
+- opportunity to run parsing only for 1 resource
+
+- parse single record to Author/Title/Year

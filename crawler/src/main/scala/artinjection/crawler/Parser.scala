@@ -12,7 +12,11 @@ import scala.Array
  * Date: 5/7/13
  */
 object Parser extends PageParser {
-  def main(args: Array[String]) { parse().foreach{case (name, values) => println("\n" + name + ":" + values.mkString("\n----- "))} }
+  def main(args: Array[String]) {
+    val serializer = new TextSerializer[Page]("page_results")
+    parse().foreach(entry => serializer.addPartToSerialize(new Page(entry._1, entry._2)))
+    serializer.done()
+  }
 }
 
 trait CommonParser {
@@ -21,7 +25,6 @@ trait CommonParser {
     new File(settings.directory).listFiles()
       .filter(_.getName.startsWith(settings.prefix))
       .map(f => (f.getName -> parsePage(io.Source.fromFile(f).mkString, f.getName)))
-      .filter(!_._2.isEmpty)
       .foldLeft(Map[String, Seq[String]]())((res, entry) =>
          res + entry)
   }

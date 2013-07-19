@@ -22,10 +22,14 @@ trait IOUtils {
 
   def toFile(is: String, f: File) {
     val out = new PrintWriter(f)
-    try { is.split("\n").foreach(out.print(_)) }
+    try { out.print(is) }
     finally {
       out.close
     }
+  }
+
+  def toFile(is: String, fileName: String) {
+    toFile(is, new File(fileName))
   }
 
   def download(theUrl: String): String =

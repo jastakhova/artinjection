@@ -8,8 +8,12 @@ case class DumpSettings(directory: String, prefix: String)
 
 object CommonProperties {
 
-  val searchSettings = DumpSettings("/tmp/artinjection/search", "asked_for_")
-  val pageSettings = DumpSettings("/tmp/artinjection/pages", "")
+  val rootDirectory = "/tmp/artinjection/"
+
+  val searchSettings = DumpSettings(rootDirectory + "search", "asked_for_")
+  val pageSettings = DumpSettings(rootDirectory + "pages", "")
+
+  val resultDirectory = rootDirectory + "result/"
 }
 
 
