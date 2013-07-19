@@ -35,4 +35,8 @@ trait IOUtils {
     } catch {
       case e: Exception => ""
     }
+
+  def getResourceAsList(resource: String): Seq[String] =
+    io.Source.fromInputStream(getClass.getResourceAsStream("/" + resource)).mkString
+      .split("\n").filterNot(_.isEmpty).filterNot(_.startsWith("#"))
 }

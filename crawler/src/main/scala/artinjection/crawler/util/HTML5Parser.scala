@@ -1,4 +1,4 @@
-package artinjetion.crawler.util
+package artinjection.crawler.util
 
 import org.xml.sax.InputSource
 
