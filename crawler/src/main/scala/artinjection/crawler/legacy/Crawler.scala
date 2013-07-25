@@ -1,8 +1,10 @@
-package artinjection.crawler
+package artinjection.crawler.legacy
 
 import java.io._
 import artinjection.core.IOUtils
 import java.net.URLEncoder
+import artinjection.crawler.CommonProperties
+import artinjection.crawler._
 
 object Crawler extends CrawlerStrategy with ThinQueryStrategy {
   def main(args : Array[String]) = crawl(

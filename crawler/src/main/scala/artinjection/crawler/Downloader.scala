@@ -2,6 +2,7 @@ package artinjection.crawler
 
 import artinjection.core.IOUtils
 import artinjection.core.StringUtils._
+import legacy.CrawledDataDumper
 
 /**
  * @author Julia Astakhova
