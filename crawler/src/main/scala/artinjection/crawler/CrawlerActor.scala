@@ -16,25 +16,20 @@ object CrawlerActor {
   }
 }
 
-class CrawlerActor extends Actor with IOUtils {
+class CrawlerActor extends BulkRequestorActor[SearchQueryActor.Query] with IOUtils {
 
+  import BulkSenderActor._
   import SearchQueryActor._
 
   val dataDumper = new DataDumper(CommonProperties.searchSettings)
 
-  override def preStart() {
-    val queryActor = context.actorOf(Props(new SearchQueryActor with JustOneQuery), "QueryActor")
-    queryActor ! SendMeQueries
-  }
+  protected def createSenderActor: ActorRef =
+    context.actorOf(Props(new SearchQueryActor with JustOneQuery), "QueryActor")
 
-  def receive = {
+  protected def processMessage(t : Query) = t match {
     case Query(query) => {
       val downloadedPage = download("https://www.google.com/search?q=%s".format(URLEncoder.encode(query, "utf8")))
       dataDumper.dump(query.replaceAll(" ", "_"), downloadedPage)
-      sender ! QueryProcessed
-    }
-    case AllQueriesSent => {
-      context.system.shutdown()
     }
   }
 }
