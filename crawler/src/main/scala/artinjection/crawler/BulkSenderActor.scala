@@ -23,8 +23,10 @@ trait BulkSenderActor[T] extends Actor {
 
   import BulkSenderActor._
 
+  protected def timeout: Int = 10
+
   implicit val executionContext = context.system.dispatchers.defaultGlobalDispatcher
-  implicit val askTimeout = Timeout(10.seconds)
+  implicit val askTimeout = Timeout(timeout.seconds)
 
   def receive = {
     case SendMe => {
@@ -32,6 +34,7 @@ trait BulkSenderActor[T] extends Actor {
       val futures = retrieve().map(requestor ? Message(_))
       Future.sequence(futures).andThen {
         case Left(t) => {
+          println("Message processing failed in " + this)
           t.printStackTrace()
           requestor ! AllMessagesSent
         }

@@ -13,3 +13,8 @@
 - opportunity to run parsing only for 1 resource
 
 - parse single record to Author/Title/Year
+
+
+== Bugs ==
+
+1. link "https:.html" is parsed from search google page

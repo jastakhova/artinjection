@@ -17,6 +17,8 @@ class FileLifterActor(settings: DumpSettings) extends BulkSenderActor[FileLifter
 
   import FileLifterActor._
 
+  override protected def timeout: Int = 60
+
   protected def retrieve(): Seq[LiftedFile] =
     new File(settings.directory).listFiles()
       .filter(_.getName.startsWith(settings.prefix))

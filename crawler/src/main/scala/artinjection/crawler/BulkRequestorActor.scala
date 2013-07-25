@@ -16,16 +16,17 @@ trait BulkRequestorActor[T] extends Actor {
 
   protected def createSenderActor: ActorRef
 
-  protected def processMessage(t : T)
+  protected def processMessage(t : T, sender: ActorRef): Boolean
 
-  def receive = {
+  def receive = bulkReceive
+
+  protected def bulkReceive: Receive = {
     case Message(t: T) => {
-      processMessage(t)
-      sender ! MessageProcessed
+      if (processMessage(t, sender))
+        sender ! MessageProcessed
     }
     case AllMessagesSent => {
       context.system.shutdown()
     }
   }
-
 }

@@ -26,11 +26,10 @@ class CrawlerActor extends BulkRequestorActor[SearchQueryActor.Query] with IOUti
   protected def createSenderActor: ActorRef =
     context.actorOf(Props(new SearchQueryActor with JustOneQuery), "QueryActor")
 
-  protected def processMessage(t : Query) = t match {
-    case Query(query) => {
-      val downloadedPage = download("https://www.google.com/search?q=%s".format(URLEncoder.encode(query, "utf8")))
-      dataDumper.dump(query.replaceAll(" ", "_"), downloadedPage)
-    }
+  protected def processMessage(t : Query, sender: ActorRef) = {
+    val downloadedPage = download("https://www.google.com/search?q=%s".format(URLEncoder.encode(t.query, "utf8")))
+    dataDumper.dump(t.query.replaceAll(" ", "_"), downloadedPage)
+    true
   }
 }
 
