@@ -1,8 +1,8 @@
-package artinjection.crawler
+package artinjection.crawler.legacy
 
 import artinjection.core.IOUtils
 import artinjection.core.StringUtils._
-import legacy.CrawledDataDumper
+import artinjection.crawler.{CommonProperties}
 
 /**
  * @author Julia Astakhova

@@ -18,6 +18,8 @@ trait BulkRequestorActor[T] extends Actor {
 
   protected def processMessage(t : T, sender: ActorRef): Boolean
 
+  protected def onAllMessagesSent() = {}
+
   def receive = bulkReceive
 
   protected def bulkReceive: Receive = {
@@ -26,6 +28,7 @@ trait BulkRequestorActor[T] extends Actor {
         sender ! MessageProcessed
     }
     case AllMessagesSent => {
+      onAllMessagesSent()
       context.system.shutdown()
     }
   }

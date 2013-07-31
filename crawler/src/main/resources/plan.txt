@@ -1,6 +1,6 @@
 + dumping found painting records to a file; output should contain only statistics
 
-- akka
++ akka
 
 - statistics 1) resources with found painting records
 2) resources with no painting record

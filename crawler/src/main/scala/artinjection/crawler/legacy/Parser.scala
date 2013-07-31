@@ -1,4 +1,4 @@
-package artinjection.crawler
+package artinjection.crawler.legacy
 
 import java.io.File
 import artinjection.core.StringUtils._
@@ -6,6 +6,7 @@ import artinjection.crawler.util.HTML5Parser
 import scala.xml._
 import artinjection.core.IOUtils
 import scala.Array
+import artinjection.crawler.{CommonProperties, DumpSettings, Page, TextSerializer}
 
 /**
  * User: Julia Astakhova
