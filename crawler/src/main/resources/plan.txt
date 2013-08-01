@@ -2,13 +2,14 @@
 
 + akka
 
-- statistics 1) resources with found painting records
++ statistics
+1) resources with found painting records
 2) resources with no painting record
 3) per resource: elements with painting, painting count if painting records were found
 
-- serializing statistics
++ serializing statistics
 
-- querying statistics per resource
+? querying statistics per resource
 
 - opportunity to run parsing only for 1 resource
 
